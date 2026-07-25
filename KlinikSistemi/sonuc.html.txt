@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Borç Sonucu</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="login-box">
+
+<div class="logo">
+
+<i class="fa-solid fa-file-invoice-dollar"></i>
+
+<h1>Muayene Borcu</h1>
+
+<p>Hasta Borç Bilgilendirme</p>
+
+</div>
+
+<div class="card">
+
+<div class="price">
+
+100,00 ₺
+
+</div>
+
+<div class="status">
+
+<i class="fa-solid fa-circle-exclamation"></i>
+
+Ödeme Bekleniyor
+
+</div>
+
+<hr>
+
+<div class="patient">
+
+<p><b>TC :</b> <span id="tc"></span></p>
+
+<p><b>Ad Soyad :</b> <span id="name"></span></p>
+
+<p><b>Telefon :</b> <span id="phone"></span></p>
+
+</div>
+
+<button id="detailBtn">
+
+<i class="fa-solid fa-circle-info"></i>
+
+Borç Detayları
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("tc").innerText=sessionStorage.getItem("patient_tc");
+
+document.getElementById("name").innerText=sessionStorage.getItem("patient_name");
+
+document.getElementById("phone").innerText=sessionStorage.getItem("patient_phone");
+
+document.getElementById("detailBtn").onclick=function(){
+
+alert("Burada borç detay ekranı açılacak.");
+
+};
+
+</script>
+
+</body>
+
+</html>

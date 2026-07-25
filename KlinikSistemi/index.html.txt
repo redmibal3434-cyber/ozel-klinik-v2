@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Özel Klinik Hasta İşlemleri</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="login-box">
+
+<div class="logo">
+
+<i class="fa-solid fa-hospital"></i>
+
+<h1>Özel Klinik</h1>
+
+<p>Hasta Bilgilendirme Sistemi</p>
+
+</div>
+
+<div class="form">
+
+<div class="input-group">
+
+<label>TC Kimlik No</label>
+
+<input
+type="text"
+id="tc"
+maxlength="11"
+placeholder="11 Haneli TC Kimlik No">
+
+</div>
+
+<div class="input-group">
+
+<label>Ad Soyad</label>
+
+<input
+type="text"
+id="fullname"
+placeholder="Ad Soyad">
+
+</div>
+
+<div class="input-group">
+
+<label>Telefon</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="05xx xxx xx xx">
+
+</div>
+
+<button id="searchBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Sorgula
+
+</button>
+
+</div>
+
+<div id="loading">
+
+<div class="spinner"></div>
+
+<p>Borç bilgileri sorgulanıyor...</p>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script>
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyAQsdwBjaW2Dg6lVfP4aAzZ84q-qBMxDrQ",
+
+authDomain: "ozelklinik.firebaseapp.com",
+
+projectId: "ozelklinik",
+
+storageBucket: "ozelklinik.firebasestorage.app",
+
+messagingSenderId: "765103637681",
+
+appId: "1:765103637681:web:b48691e145da9442884e90"
+
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+
+</script>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

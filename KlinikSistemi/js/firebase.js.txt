@@ -1,0 +1,18 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+    getFirestore
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "BURAYA_YENI_API_KEY",
+    authDomain: "ozelklinik.firebaseapp.com",
+    projectId: "ozelklinik",
+    storageBucket: "ozelklinik.firebasestorage.app",
+    messagingSenderId: "765103637681",
+    appId: "1:765103637681:web:b48691e145da9442884e90"
+};
+
+const app = initializeApp(firebaseConfig);
+
+export const db = getFirestore(app);
